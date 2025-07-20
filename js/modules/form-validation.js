@@ -82,21 +82,13 @@ export class FormValidation {
     const errorElement = document.createElement('span');
     errorElement.className = 'contact__error';
     errorElement.textContent = message;
-    errorElement.style.cssText = `
-      color: #e53e3e;
-      font-size: 0.875rem;
-      margin-top: 0.25rem;
-      display: block;
-    `;
 
     field.classList.add('is-error');
-    field.style.borderColor = '#e53e3e';
     field.parentElement.appendChild(errorElement);
   }
 
   clearError(field) {
     field.classList.remove('is-error');
-    field.style.borderColor = '';
 
     const errorElement = field.parentElement.querySelector('.contact__error');
     if (errorElement) {
@@ -108,21 +100,12 @@ export class FormValidation {
     const successMessage = document.createElement('div');
     successMessage.className = 'contact__success';
     successMessage.textContent = 'お問い合わせありがとうございます。内容を確認次第、ご連絡いたします。';
-    successMessage.style.cssText = `
-      background-color: #48bb78;
-      color: white;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      text-align: center;
-      animation: slideIn 0.3s ease-out;
-    `;
 
     this.form.parentElement.insertBefore(successMessage, this.form);
 
     // 5秒後に自動的に削除
     setTimeout(() => {
-      successMessage.style.animation = 'slideOut 0.3s ease-out';
+      successMessage.classList.add('contact__success--fade-out');
       setTimeout(() => successMessage.remove(), 300);
     }, 5000);
   }
