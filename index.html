@@ -420,76 +420,25 @@
           
           <!-- メールフォーム（テスト用に表示） -->
           <div id="email-form" class="contact__email-form-container" style="display: block;">
-            <form class="contact__form" action="https://formspree.io/f/xqalpyvl" method="POST">
-              <!-- Formspree設定 -->
-              <input type="hidden" name="_subject" value="YUAIホームページからのお問い合わせ">
-              <input type="hidden" name="_next" value="https://yuai.design/thanks.html">
-              <input type="hidden" name="_language" value="ja">
+            <!-- Formspree見本ベースのシンプルフォーム -->
+            <form action="https://formspree.io/f/xqalpyvl" method="POST" class="contact__form">
               <div class="contact__form-group">
                 <label for="name" class="contact__label">お名前 *</label>
-                <input type="text" id="name" name="name" class="contact__input" autocomplete="name" required>
-              </div>
-              
-              <div class="contact__form-group">
-                <label for="company" class="contact__label">会社名・屋号</label>
-                <input type="text" id="company" name="company" class="contact__input" autocomplete="organization">
+                <input type="text" name="name" id="name" class="contact__input" required>
               </div>
               
               <div class="contact__form-group">
                 <label for="email" class="contact__label">メールアドレス *</label>
-                <input type="email" id="email" name="email" class="contact__input" autocomplete="email" required>
-              </div>
-              
-              <div class="contact__form-group">
-                <label for="phone" class="contact__label">電話番号</label>
-                <input type="tel" id="phone" name="phone" class="contact__input" autocomplete="tel">
-              </div>
-              
-              <div class="contact__form-group">
-                <label for="project-type" class="contact__label">ご希望のサービス</label>
-                <select id="project-type" name="project-type" class="contact__select">
-                  <option value="">選択してください</option>
-                  <option value="homepage">ホームページ制作</option>
-                  <option value="renewal">ホームページリニューアル</option>
-                  <option value="webapp">ウェブアプリ開発</option>
-                  <option value="consultation">IT相談・コンサルティング</option>
-                  <option value="other">その他</option>
-                </select>
-              </div>
-              
-              <div class="contact__form-group">
-                <label for="budget" class="contact__label">ご予算</label>
-                <select id="budget" name="budget" class="contact__select">
-                  <option value="">選択してください</option>
-                  <option value="under-30">30万円未満</option>
-                  <option value="30-50">30〜50万円</option>
-                  <option value="50-100">50〜100万円</option>
-                  <option value="over-100">100万円以上</option>
-                  <option value="undecided">未定・相談したい</option>
-                </select>
-              </div>
-              
-              <div class="contact__form-group">
-                <label for="timeline" class="contact__label">希望納期</label>
-                <select id="timeline" name="timeline" class="contact__select">
-                  <option value="">選択してください</option>
-                  <option value="asap">できるだけ早く</option>
-                  <option value="1month">1ヶ月以内</option>
-                  <option value="3months">3ヶ月以内</option>
-                  <option value="flexible">時期は相談</option>
-                </select>
+                <input type="email" name="email" id="email" class="contact__input" required>
               </div>
               
               <div class="contact__form-group">
                 <label for="message" class="contact__label">ご相談内容・ご質問 *</label>
-                <textarea id="message" name="message" rows="5" class="contact__textarea" required 
-                          placeholder="どんな些細なことでもお気軽にご相談ください"
-                          autocomplete="off"></textarea>
+                <textarea name="message" id="message" rows="5" class="contact__textarea" 
+                          placeholder="どんな些細なことでもお気軽にご相談ください" required></textarea>
               </div>
               
-              <button type="submit" class="contact__submit">
-                📤 送信する
-              </button>
+              <button type="submit" class="contact__submit">送信する</button>
             </form>
           </div>
           
