@@ -84,6 +84,9 @@
               <a href="#home" class="header__menu-link">ホーム</a>
             </li>
             <li class="header__menu-item">
+              <a href="#about" class="header__menu-link">会社概要</a>
+            </li>
+            <li class="header__menu-item">
               <a href="#services" class="header__menu-link">サービス</a>
             </li>
             <li class="header__menu-item">
@@ -335,120 +338,169 @@
         </div>
       </section>
 
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="about__container container">
+          <h2 class="about__title section-title">会社概要</h2>
+          
+          <!-- Mission & Vision -->
+          <div class="about__mission-vision">
+            <div class="about__mission card card--secondary">
+              <h3 class="about__mission-title icon-title">
+                <span class="icon-title__icon">🌟</span>
+                ミッション
+              </h3>
+              <h4 class="about__mission-headline">「新城市をIT先進都市へ」</h4>
+              <p class="about__mission-description">
+                ITの力で無駄な事務作業を削減し、地域企業が本来大切にすべき「お客様との時間」を増やします。
+              </p>
+              <ul class="about__mission-benefits">
+                <li>お店のサービス品質向上</li>
+                <li>地域経済の活性化</li>
+                <li>新城市全体の魅力向上</li>
+              </ul>
+            </div>
+            
+            <div class="about__vision card card--secondary">
+              <h3 class="about__vision-title icon-title">
+                <span class="icon-title__icon">🚀</span>
+                ビジョン（5年後）
+              </h3>
+              <h4 class="about__vision-headline">新城市の企業がITで困ることのない環境を構築</h4>
+              <ul class="about__vision-goals">
+                <li>事務作業の自動化で残業時間50%削減</li>
+                <li>地域企業の売上平均30%向上</li>
+                <li>「新城市はIT先進地域」として他地域のモデルに</li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
       <!-- Contact Section -->
       <section id="contact" class="contact">
-        <div class="contact__container">
-          <h2 class="contact__title">お問い合わせ</h2>
-          <p class="contact__subtitle">
-            東三河地域のビジネスオーナー様、まずは無料相談から始めませんか？<br />
-            直接お会いしてのご相談も承ります
+        <div class="contact__container container">
+          <h2 class="contact__title section-title">お問い合わせ</h2>
+          <p class="contact__intro">
+            ご相談は無料です。お気軽にお問い合わせください。<br>
+            24時間以内にご返信いたします。
           </p>
-
-          <form class="contact__form" action="#" method="POST">
-            <div class="contact__form-group">
-              <label for="name" class="contact__label"
-                >お名前 <span class="contact__required">*</span></label
-              >
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="contact__input"
-                required
-              />
+          
+          <div class="contact__methods">
+            <!-- LINE公式アカウント -->
+            <div class="contact__method contact__method--line">
+              <div class="contact__method-icon">📱</div>
+              <h3 class="contact__method-title">LINE公式アカウント</h3>
+              <p class="contact__method-description">
+                最も早くお返事できます<br>
+                写真や資料の共有も簡単
+              </p>
+              <a href="#" class="contact__line-btn">
+                <span class="contact__line-icon">💬</span>
+                LINEで相談する
+              </a>
+              <p class="contact__response-time">通常1時間以内に返信</p>
             </div>
-
-            <div class="contact__form-group">
-              <label for="email" class="contact__label"
-                >メールアドレス <span class="contact__required">*</span></label
-              >
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="contact__input"
-                required
-              />
+            
+            <!-- メールフォーム -->
+            <div class="contact__method contact__method--email">
+              <div class="contact__method-icon">✉️</div>
+              <h3 class="contact__method-title">メールフォーム</h3>
+              <p class="contact__method-description">
+                詳しい内容を整理して<br>
+                じっくりご相談したい方
+              </p>
+              <button class="contact__email-btn" onclick="showEmailForm()">
+                📝 メールで相談する
+              </button>
+              <p class="contact__response-time">24時間以内に返信</p>
             </div>
-
-            <div class="contact__form-group">
-              <label for="company" class="contact__label">会社名</label>
-              <input
-                type="text"
-                id="company"
-                name="company"
-                class="contact__input"
-              />
-            </div>
-
-            <div class="contact__form-group">
-              <label for="phone" class="contact__label">電話番号</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                class="contact__input"
-              />
-            </div>
-
-            <div class="contact__form-group">
-              <label for="subject" class="contact__label"
-                >件名 <span class="contact__required">*</span></label
-              >
-              <select
-                id="subject"
-                name="subject"
-                class="contact__select"
-                required
-              >
-                <option value="">選択してください</option>
-                <option value="website">ホームページ制作について</option>
-                <option value="webapp">ウェブアプリ開発について</option>
-                <option value="consultation">相談・見積もり</option>
-                <option value="other">その他</option>
-              </select>
-            </div>
-
-            <div class="contact__form-group">
-              <label for="message" class="contact__label"
-                >お問い合わせ内容
-                <span class="contact__required">*</span></label
-              >
-              <textarea
-                id="message"
-                name="message"
-                class="contact__textarea"
-                rows="6"
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit" class="contact__submit">送信する</button>
-          </form>
-
-          <div class="contact__info">
-            <h3 class="contact__info-title">連絡先情報</h3>
-            <dl class="contact__info-list">
-              <dt class="contact__info-label">メール</dt>
-              <dd class="contact__info-value">
-                <a href="mailto:info@yuai.design">info@yuai.design</a>
-              </dd>
-              <dt class="contact__info-label">所在地</dt>
-              <dd class="contact__info-value">愛知県新城市</dd>
-              <dt class="contact__info-label">対応エリア</dt>
-              <dd class="contact__info-value">
-                新城市・豊橋市・豊川市・蒲郡市・田原市<br />
-                設楽町・東栄町・豊根村（その他エリアもご相談ください）
-              </dd>
-              <dt class="contact__info-label">対応時間</dt>
-              <dd class="contact__info-value">
-                平日 9:00-18:00（緊急時は24時間対応）
-              </dd>
-              <dt class="contact__info-label">訪問相談</dt>
-              <dd class="contact__info-value">
-                東三河地域内なら無料で訪問いたします
-              </dd>
-            </dl>
+          </div>
+          
+          <!-- メールフォーム（初期は非表示） -->
+          <div id="email-form" class="contact__email-form-container" style="display: none;">
+            <form class="contact__form" action="https://formspree.io/f/xqalpyvl" method="POST">
+              <!-- Formspree設定 -->
+              <input type="hidden" name="_subject" value="YUAIホームページからのお問い合わせ">
+              <input type="hidden" name="_next" value="https://yuai.design/thanks.html">
+              <input type="hidden" name="_language" value="ja">
+              <div class="contact__form-group">
+                <label for="name" class="contact__label">お名前 *</label>
+                <input type="text" id="name" name="name" class="contact__input" autocomplete="name" required>
+              </div>
+              
+              <div class="contact__form-group">
+                <label for="company" class="contact__label">会社名・屋号</label>
+                <input type="text" id="company" name="company" class="contact__input" autocomplete="organization">
+              </div>
+              
+              <div class="contact__form-group">
+                <label for="email" class="contact__label">メールアドレス *</label>
+                <input type="email" id="email" name="email" class="contact__input" autocomplete="email" required>
+              </div>
+              
+              <div class="contact__form-group">
+                <label for="phone" class="contact__label">電話番号</label>
+                <input type="tel" id="phone" name="phone" class="contact__input" autocomplete="tel">
+              </div>
+              
+              <div class="contact__form-group">
+                <label for="project-type" class="contact__label">ご希望のサービス</label>
+                <select id="project-type" name="project-type" class="contact__select">
+                  <option value="">選択してください</option>
+                  <option value="homepage">ホームページ制作</option>
+                  <option value="renewal">ホームページリニューアル</option>
+                  <option value="webapp">ウェブアプリ開発</option>
+                  <option value="consultation">IT相談・コンサルティング</option>
+                  <option value="other">その他</option>
+                </select>
+              </div>
+              
+              <div class="contact__form-group">
+                <label for="budget" class="contact__label">ご予算</label>
+                <select id="budget" name="budget" class="contact__select">
+                  <option value="">選択してください</option>
+                  <option value="under-30">30万円未満</option>
+                  <option value="30-50">30〜50万円</option>
+                  <option value="50-100">50〜100万円</option>
+                  <option value="over-100">100万円以上</option>
+                  <option value="undecided">未定・相談したい</option>
+                </select>
+              </div>
+              
+              <div class="contact__form-group">
+                <label for="timeline" class="contact__label">希望納期</label>
+                <select id="timeline" name="timeline" class="contact__select">
+                  <option value="">選択してください</option>
+                  <option value="asap">できるだけ早く</option>
+                  <option value="1month">1ヶ月以内</option>
+                  <option value="3months">3ヶ月以内</option>
+                  <option value="flexible">時期は相談</option>
+                </select>
+              </div>
+              
+              <div class="contact__form-group">
+                <label for="message" class="contact__label">ご相談内容・ご質問 *</label>
+                <textarea id="message" name="message" rows="5" class="contact__textarea" required 
+                          placeholder="どんな些細なことでもお気軽にご相談ください"
+                          autocomplete="off"></textarea>
+              </div>
+              
+              <button type="submit" class="contact__submit">
+                📤 送信する
+              </button>
+            </form>
+          </div>
+          
+          <!-- 対応時間 -->
+          <div class="contact__response-info">
+            <h3 class="contact__response-info-title">対応時間について</h3>
+            <p class="contact__response-info-text">
+              📱 LINE：24時間受付（通常1時間以内に返信）<br>
+              ✉️ メール：24時間受付（24時間以内に返信）<br>
+              <small>※緊急の場合はLINEの方が早く対応できます</small>
+            </p>
           </div>
         </div>
       </section>
@@ -467,6 +519,7 @@
             <h4 class="footer__nav-title">サイトマップ</h4>
             <ul class="footer__nav-list">
               <li><a href="#home" class="footer__nav-link">ホーム</a></li>
+              <li><a href="#about" class="footer__nav-link">会社概要</a></li>
               <li><a href="#services" class="footer__nav-link">サービス</a></li>
               <li><a href="#technology" class="footer__nav-link">技術力</a></li>
               <li>

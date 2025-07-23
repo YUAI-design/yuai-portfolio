@@ -10,6 +10,7 @@ import { HeaderScroll } from './modules/header-scroll.js';
 import { FormValidation } from './modules/form-validation.js';
 import { ScrollAnimations } from './modules/scroll-animations.js';
 import { BackToTop } from './modules/back-to-top.js';
+import { ContactForm } from './modules/contact-form.js';
 import { createAnimationStyles } from './modules/animations.js';
 
 // アプリケーションクラス
@@ -21,7 +22,8 @@ class App {
       headerScroll: new HeaderScroll(),
       formValidation: new FormValidation(),
       scrollAnimations: new ScrollAnimations(),
-      backToTop: new BackToTop()
+      backToTop: new BackToTop(),
+      contactForm: new ContactForm()
     };
   }
 

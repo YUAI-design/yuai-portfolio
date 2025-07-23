@@ -76,6 +76,19 @@
     grid-template-columns: 1fr;
   }
 
+  /* About Section */
+  .about__mission-vision {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+
+  /* Contact Section */
+  .contact__methods {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
   /* Contact Form */
   .contact__form {
     padding: var(--spacing-xl);
@@ -111,6 +124,7 @@
   .header__container,
   .hero__container,
   .services__container,
+  .about__container,
   .portfolio__container,
   .contact__container,
   .footer__container {
@@ -135,6 +149,22 @@
 
   .service-card__title {
     font-size: var(--font-size-medium);
+  }
+
+  /* About Section */
+  .about__mission,
+  .about__vision {
+    padding: var(--spacing-xl);
+  }
+
+
+  /* Contact Section */
+  .contact__method {
+    padding: var(--spacing-xl);
+  }
+
+  .contact__email-form-container {
+    padding: var(--spacing-xl);
   }
 
   /* Contact */
