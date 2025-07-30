@@ -1,0 +1,21 @@
+{
+  "name": "YUAI - ホームページ作成・ウェブアプリ開発",
+  "short_name": "YUAI",
+  "description": "YUAIは、ホームページ作成とウェブアプリ開発を専門とするデザインスタジオです。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a365d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "ja",
+  "dir": "ltr",
+  "categories": ["business", "developer", "design"]
+}

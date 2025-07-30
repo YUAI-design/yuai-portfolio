@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <title>お問い合わせありがとうございます - YUAI</title>
+    <meta name="description" content="お問い合わせいただきありがとうございます。24時間以内にご返信いたします。" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="header__nav">
+        <div class="header__container">
+          <div class="header__logo">
+            <a href="/" class="header__logo-link">YUAI</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Thanks Section -->
+      <section class="thanks">
+        <div class="thanks__container container">
+          <div class="thanks__content">
+            <div class="thanks__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22,4 12,14.01 9,11.01"></polyline>
+              </svg>
+            </div>
+            
+            <h1 class="thanks__title">お問い合わせありがとうございます</h1>
+            
+            <div class="thanks__message">
+              <p class="thanks__text">
+                この度は、YUAIにお問い合わせいただき誠にありがとうございます。<br>
+                お送りいただいた内容を確認し、<strong>24時間以内</strong>にご返信いたします。
+              </p>
+              
+              <div class="thanks__info">
+                <h2 class="thanks__info-title">今後の流れ</h2>
+                <ul class="thanks__info-list">
+                  <li>📧 お問い合わせ内容の確認・検討</li>
+                  <li>📞 24時間以内にメールまたはお電話でご連絡</li>
+                  <li>🤝 必要に応じて対面でのお打ち合わせ</li>
+                  <li>📝 具体的なご提案・お見積もり提示</li>
+                </ul>
+              </div>
+              
+              <div class="thanks__urgent">
+                <h3 class="thanks__urgent-title">🚨 お急ぎの場合</h3>
+                <p class="thanks__urgent-text">
+                  緊急でお急ぎの場合は、LINEからご連絡ください。<br>
+                  より迅速にご対応いたします。
+                </p>
+                <a href="#" class="thanks__line-btn">
+                  <span class="thanks__line-icon">💬</span>
+                  LINEで連絡する
+                </a>
+              </div>
+            </div>
+            
+            <div class="thanks__actions">
+              <a href="/" class="thanks__btn thanks__btn--primary">
+                ホームに戻る
+              </a>
+              <a href="/#services" class="thanks__btn thanks__btn--secondary">
+                サービス一覧を見る
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__content">
+          <div class="footer__brand">
+            <h3 class="footer__logo">YUAI</h3>
+            <p class="footer__tagline">Your Vision, Our Innovation</p>
+          </div>
+        </div>
+        
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            &copy; 2025 YUAI. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      /* Thanks Page Specific Styles */
+      .thanks {
+        padding: calc(var(--header-height) + var(--spacing-xxxl)) 0 var(--spacing-xxxl);
+        background: linear-gradient(135deg, var(--color-background) 0%, var(--color-secondary) 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+      
+      .thanks__container {
+        max-width: 800px;
+      }
+      
+      .thanks__content {
+        text-align: center;
+        background-color: var(--color-secondary);
+        padding: var(--spacing-xxxl);
+        border-radius: var(--radius-lg);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      }
+      
+      .thanks__icon {
+        color: #10B981;
+        margin-bottom: var(--spacing-xl);
+      }
+      
+      .thanks__title {
+        font-size: var(--font-size-xlarge);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-xl);
+      }
+      
+      .thanks__text {
+        font-size: var(--font-size-medium);
+        color: var(--color-text-light);
+        line-height: 1.8;
+        margin-bottom: var(--spacing-xxl);
+      }
+      
+      .thanks__info {
+        background-color: var(--color-background);
+        padding: var(--spacing-xl);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        text-align: left;
+      }
+      
+      .thanks__info-title {
+        font-size: var(--font-size-medium);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-md);
+        text-align: center;
+      }
+      
+      .thanks__info-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+      }
+      
+      .thanks__info-list li {
+        color: var(--color-text);
+        line-height: 1.6;
+      }
+      
+      .thanks__urgent {
+        background-color: #FEF3C7;
+        border: 1px solid #F59E0B;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+      }
+      
+      .thanks__urgent-title {
+        font-size: var(--font-size-medium);
+        font-weight: var(--font-weight-semibold);
+        color: #92400E;
+        margin-bottom: var(--spacing-sm);
+      }
+      
+      .thanks__urgent-text {
+        color: #92400E;
+        margin-bottom: var(--spacing-md);
+        line-height: 1.6;
+      }
+      
+      .thanks__line-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        background: #00B900;
+        color: white;
+        padding: var(--spacing-sm) var(--spacing-lg);
+        border-radius: var(--radius-md);
+        text-decoration: none;
+        font-weight: var(--font-weight-semibold);
+        transition: var(--transition-base);
+        font-size: var(--font-size-small);
+      }
+      
+      .thanks__line-btn:hover {
+        background: #009900;
+        color: white;
+        transform: translateY(-1px);
+      }
+      
+      .thanks__line-icon {
+        font-size: var(--font-size-medium);
+      }
+      
+      .thanks__actions {
+        display: flex;
+        gap: var(--spacing-lg);
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      .thanks__btn {
+        padding: var(--spacing-md) var(--spacing-xl);
+        border-radius: var(--radius-md);
+        font-weight: var(--font-weight-semibold);
+        transition: var(--transition-base);
+        text-decoration: none;
+        display: inline-block;
+      }
+      
+      .thanks__btn--primary {
+        background-color: var(--color-accent);
+        color: var(--color-secondary);
+      }
+      
+      .thanks__btn--primary:hover {
+        background-color: var(--color-accent-light);
+        color: var(--color-secondary);
+        transform: translateY(-2px);
+      }
+      
+      .thanks__btn--secondary {
+        border: 2px solid var(--color-accent);
+        color: var(--color-accent);
+      }
+      
+      .thanks__btn--secondary:hover {
+        background-color: var(--color-accent);
+        color: var(--color-secondary);
+      }
+      
+      /* Responsive */
+      @media screen and (max-width: 768px) {
+        .thanks__content {
+          padding: var(--spacing-xl);
+        }
+        
+        .thanks__title {
+          font-size: var(--font-size-large);
+        }
+        
+        .thanks__actions {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .thanks__btn {
+          width: 100%;
+          max-width: 300px;
+          text-align: center;
+        }
+      }
+    </style>
+  </body>
+</html>

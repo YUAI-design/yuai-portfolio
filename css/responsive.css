@@ -1,0 +1,303 @@
+/* ================================================
+   Responsive Styles - Mobile First Approach
+   ================================================ */
+
+/* ================================================
+   Tablet Styles (768px and below)
+   ================================================ */
+@media screen and (max-width: 768px) {
+  /* Typography adjustments */
+  :root {
+    --font-size-xxlarge: 2.5rem;
+    --font-size-xlarge: 1.75rem;
+  }
+
+  /* Header */
+  .header__menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--color-secondary);
+    flex-direction: column;
+    padding: var(--spacing-xl);
+    box-shadow: 0 4px 12px var(--color-shadow);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .header__menu.is-active {
+    transform: translateX(0);
+  }
+
+  .header__mobile-toggle {
+    display: flex;
+  }
+
+  .header__mobile-toggle.is-active .header__mobile-toggle-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .header__mobile-toggle.is-active .header__mobile-toggle-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__mobile-toggle.is-active .header__mobile-toggle-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  /* Hero Section */
+  .hero {
+    padding-top: calc(var(--header-height) + var(--spacing-xxl));
+    padding-bottom: var(--spacing-xxl);
+  }
+
+  .hero__title {
+    font-size: var(--font-size-xlarge);
+  }
+
+  .hero__description {
+    font-size: var(--font-size-base);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__cta {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  /* Services */
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About Section */
+  .about__mission-vision {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+
+  /* Contact Section */
+  .contact__methods {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  /* Contact Form */
+  .contact__form {
+    padding: var(--spacing-xl);
+  }
+
+  /* Footer */
+  .footer__content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer__nav-list {
+    align-items: center;
+  }
+
+  .footer__social-links {
+    justify-content: center;
+  }
+}
+
+/* ================================================
+   Mobile Styles (480px and below)
+   ================================================ */
+@media screen and (max-width: 480px) {
+  /* Typography adjustments */
+  :root {
+    --font-size-xxlarge: 2rem;
+    --font-size-xlarge: 1.5rem;
+    --font-size-large: 1.25rem;
+  }
+
+  /* Global padding adjustments */
+  .header__container,
+  .hero__container,
+  .services__container,
+  .about__container,
+  .portfolio__container,
+  .contact__container,
+  .footer__container {
+    padding: 0 var(--spacing-lg);
+  }
+
+  /* Hero Section */
+  .hero__title {
+    font-size: var(--font-size-xlarge);
+    line-height: 1.3;
+  }
+
+  .hero__description {
+    font-size: var(--font-size-small);
+    line-height: 1.6;
+  }
+
+  /* Services */
+  .service-card {
+    padding: var(--spacing-xl);
+  }
+
+  .service-card__title {
+    font-size: var(--font-size-medium);
+  }
+
+  /* About Section */
+  .about__mission,
+  .about__vision {
+    padding: var(--spacing-xl);
+  }
+
+
+  /* Contact Section */
+  .contact__method {
+    padding: var(--spacing-xl);
+  }
+
+  .contact__email-form-container {
+    padding: var(--spacing-xl);
+  }
+
+  /* Contact */
+  .contact__form {
+    padding: var(--spacing-lg);
+  }
+
+  .contact__input,
+  .contact__select,
+  .contact__textarea {
+    font-size: var(--font-size-base);
+  }
+
+  /* Footer */
+  .footer {
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+  }
+
+  .footer__content {
+    gap: var(--spacing-xl);
+  }
+}
+
+/* ================================================
+   Small Mobile Styles (320px and below)
+   ================================================ */
+@media screen and (max-width: 320px) {
+  /* Typography adjustments */
+  :root {
+    --font-size-xxlarge: 1.75rem;
+    --font-size-xlarge: 1.25rem;
+  }
+
+  /* Services */
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .service-card {
+    padding: var(--spacing-lg);
+  }
+
+  /* Buttons */
+  .hero__cta,
+  .contact__submit {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-small);
+  }
+}
+
+/* ================================================
+   Large Desktop Styles (1440px and above)
+   ================================================ */
+@media screen and (min-width: 1440px) {
+  /* Container adjustments */
+  :root {
+    --container-max-width: 1320px;
+  }
+
+  /* Typography adjustments */
+  :root {
+    --font-size-xxlarge: 3.5rem;
+    --font-size-xlarge: 2.5rem;
+  }
+
+  /* Services */
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xxl);
+  }
+}
+
+/* ================================================
+   Print Styles
+   ================================================ */
+@media print {
+  /* Hide navigation and interactive elements */
+  .header,
+  .hero__actions,
+  .contact__form,
+  .footer__social-links {
+    display: none;
+  }
+
+  /* Adjust colors for print */
+  body {
+    color: #000;
+    background-color: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  /* Page breaks */
+  .services,
+  .portfolio,
+  .contact {
+    page-break-before: always;
+  }
+}
+
+/* ================================================
+   High Contrast Mode Support
+   ================================================ */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primary: #000;
+    --color-accent: #0066cc;
+    --color-text: #000;
+    --color-text-light: #333;
+    --color-background: #fff;
+    --color-border: #000;
+  }
+
+  .hero__cta--primary,
+  .contact__submit {
+    border: 2px solid #000;
+  }
+}
+
+/* ================================================
+   Reduced Motion Support
+   ================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
